@@ -1,12 +1,12 @@
-import express, { Request, Response, NextFunction } from 'express'
+import express from 'express'
+import bodyParser from 'body-parser'
+import blogRouter from './components/blog/controller'
 
 const app = express();
 
-app.get('/', (req, res, next) => {
-  res.send('Hello World!');
-});
+app.use(bodyParser.json());
+app.use(
+  blogRouter,
+);
 
-
-app.listen(8088, function () {
-  console.log('node-practice app listening on port 8088!');
-});
+export default app;
