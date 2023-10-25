@@ -1,0 +1,6 @@
+{
+  "app": {
+    "name": "node-practice",
+    "port": 8087
+  }
+}
