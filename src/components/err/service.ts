@@ -9,7 +9,7 @@ export const someSuccessAsyncJob = () => {
 export const someFailAsyncJob = () => {
   return new Promise((_, reject) => {
     setTimeout(() => {
-      reject('Hello err!');
+      reject(new Error('Hello err!'));
     }, 5000);
   })
 };
