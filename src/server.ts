@@ -1,5 +1,10 @@
 import app from './app';
+import config from 'config';
 
-const server = app.listen(8088, function () {
-  console.log('node-practice app listening on port http://localhost:8088');
+const appName = config.get('app.name')
+
+const port = config.get('app.port');
+
+app.listen(port, function () {
+  console.log(`${ appName } app listening on port http://localhost:8088`);
 });
